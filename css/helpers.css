@@ -272,9 +272,17 @@ font-size: 20px;
 .mh600 { max-height: 600px; }.mh650 { max-height: 650px; }
 .mh700 { max-height: 700px; }.mh750 { max-height: 750px; }
 .mh800 { max-height: 800px; }.mh850 { max-height: 850px; }
-/*@media (max-width: 768px ) {
+.hAdjust { min-height: 86px; }
+@media (min-width: 480px ) {
+  .hAdjust { min-height: 175px; }
+}
+@media (min-width: 768px ) {
   .hFull { min-height: 480px!important; }
-}*/
+  .hAdjust { min-height: 222px; }
+}
+@media (min-width: 992px ) {
+  .hAdjust { min-height: 288px; }
+}
 .forceBlock {
   display: block!important;
   width: 100%!important;
