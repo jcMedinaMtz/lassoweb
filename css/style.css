@@ -1,6 +1,34 @@
+body {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f4;
+}
+
+
 #bloque-principal {
   background-image: url(../img/libertad.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+#main-container {
+  background-color: #ffffff;
+}
+
+#prefooter {
+  background-color: #0099cc;
+}
+#footer {
+  background-color: #385e9d;
+}
+
+.sticky-wrapper {
+  z-index: 4;
+}
+.sticky-container {
+  background-color: #ffffff;
+  z-index: 4;
 }

@@ -20,6 +20,6 @@ $( document ).ready( function () {
       $( '#bloque-principal' ).css( 'background-image', 'url(./img/' + portada2 + ')' );
     }
     flag = !flag;
-  }, 8000 );
+  }, 4000 );
 
 } );
