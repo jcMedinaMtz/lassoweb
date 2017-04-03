@@ -293,6 +293,11 @@ font-size: 20px;
   width: 100%;
   position: relative;
 }
+.image-block {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 .block.section{ border-top: solid 2px #b2b2b2; border-bottom: solid 2px #b2b2b2; }
 .block.centered {  margin: 0 auto !important; }
 .content {
