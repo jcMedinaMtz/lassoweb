@@ -5,30 +5,38 @@ body {
     padding: 0;
     background-color: #f0f0f4;
 }
-
-
+p {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    padding: 10px;
+}
 #bloque-principal {
-  background-image: url(../img/libertad.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    background-image: url(../img/libertad.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-
+#bloque-biografia {
+    background-image: url(../img/libertad.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 #main-container {
-  background-color: #ffffff;
+    background-color: #fff;
 }
-
 #prefooter {
-  background-color: #0099cc;
+    background-color: #09c;
 }
 #footer {
-  background-color: #385e9d;
+    background-color: #385e9d;
 }
-
 .sticky-wrapper {
-  z-index: 4;
+    z-index: 4;
 }
 .sticky-container {
-  background-color: #ffffff;
-  z-index: 4;
+    z-index: 4;
+    background-color: #fff;
 }
