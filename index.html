@@ -2,17 +2,20 @@
 <html>
 
   <head>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport"
+      content="width=device-width">
     <meta charset="utf-8">
     <title>Sitio Oficial de Guillermo Lasso</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/helpers.css">
+    <link rel="stylesheet" href="./css/material-elements.css">
     <link rel="stylesheet" href="./css/style.css">
   </head>
 
   <body>
     <section>
-      <div id="bloque-principal" class="container noPadding">
+      <div id="bloque-principal"
+        class="container noPadding">
         <div class="row">
           <div class="block hAdjust">
             <div class="hidden">
@@ -22,54 +25,89 @@
           </div>
         </div>
       </div>
-      <div id="sticky-wrapper" class="sticky-wrapper">
-        <div class="container sticky-container">
+      <div id="sticky-wrapper"
+        class="sticky-wrapper">
+        <div class="container sticky-container card card lvl-2">
           <ul class="block h50">
             <li class="content-fluid contentMiddle text-center">
               <a class="cBlue s15 text-bold text-uppercase"
-              href="index.html">Inicio</a>
+                href="index.html">Inicio</a>
             </li>
             <li class="content-fluid contentMiddle text-center">
               <a class="cBlue s15 text-bold text-uppercase"
-              href="about.html">Acerca de</a>
+                href="about.html">Acerca de</a>
             </li>
             <li class="content-fluid contentMiddle text-center">
               <a class="cBlue s15 text-bold text-uppercase"
-              href="#">Comparte tu historia</a>
+                href="#">Comparte tu historia</a>
             </li>
           </ul>
         </div>
       </div>
-      <div id="main-container" class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-                  <div class="row">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                          <div class="form-group h100">
-                              <label for="input1">Input 1</label>
-                              <input class="form-control" type="text" name="input1" id="input1" value="">
-                          </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                          <div class="form-group h100">
-                              <label for="input2">Input 2</label>
-                              <input class="form-control" type="text" name="input2" id="input2" value="">
-                          </div>
-                      </div>
-                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                          <div class="form-group">
-                              <label for="input3">Input 3</label>
-                              <textarea name="input3" rows="8" class="form-control"></textarea>
-                          </div>
-                      </div>
-                      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                          <button type="button" id="submit" class="btn btn-success">Guardar</button>
-                      </div>
+      <div id="main-container"
+        class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+            <div class="form-container">
+              <form>
+                <h1>Formulario de ejemplo</h1>
+                <div class="form-group">
+                  <select>
+                    <option>Value 1</option>
+                    <option>Value 2</option>
+                  </select>
+                  <label class="control-label"
+                  for="select">Selectbox</label><i class="bar"></i>
+                </div>
+                <div class="form-group">
+                  <input type="text" required="required" />
+                  <label class="control-label" for="input">Textfield</label><i class="bar"></i>
+                </div>
+                <div class="form-group">
+                  <input type="number" required="required" />
+                  <label class="control-label" for="input">Number</label><i class="bar"></i>
+                </div>
+                <div class="form-group">
+                  <textarea required="required"></textarea>
+                  <label class="control-label" for="textarea">Textarea</label><i class="bar"></i>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" checked="checked"/><i class="helper"></i>I'm the label from a checkbox
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"/><i class="helper"></i>I'm the label from a checkbox
+                  </label>
+                </div>
+                <div class="form-radio">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="radio" checked="checked"/><i class="helper"></i>I'm the label from a radio button
+                    </label>
                   </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="radio"/><i class="helper"></i>I'm the label from a radio button
+                    </label>
+                  </div>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"/><i class="helper"></i>I'm the label from a checkbox
+                  </label>
+                </div>
+              </form>
+              <div class="button-container">
+                <button class="button"
+                type="button"><span>Submit</span></button>
               </div>
+            </div>
           </div>
-          <div class="clear"></div>
-          <!-- <div class="row">
+        </div>
+        <div class="clear"></div>
+        <!-- <div class="row">
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                   <div class="block h200 bgDark">
 
@@ -162,21 +200,25 @@
               </div>
           </div> -->
       </div>
-      <div id="prefooter" class="container">
-          <div class="block h150">
-              <div class="content contentMiddle text-center">
-                <h2 class="cWhite text-bold">
+      <div id="prefooter"
+        class="container">
+        <div class="block h150">
+          <div class="content contentMiddle text-center">
+            <h2 class="cWhite text-bold">
                   El cambio que queremos para el Ecuador
                   <br />es trabajo para la familia ecuatoriana.</h2>
-              </div>
           </div>
+        </div>
       </div>
-      <div id="footer" class="container bgBlue noPadding">
+      <div id="footer"
+        class="container bgBlue noPadding">
         <div class="row">
           <div class="col-lg-4 col-md-4 col-sm-5 col-xs-5">
             <div class="block h150">
               <div class="content contentMiddle">
-                <img src="./img/logocreo.png" alt="Logo Creo" class="pull-left block">
+                <img src="./img/logocreo.png"
+                  alt="Logo Creo"
+                  class="pull-left block">
               </div>
             </div>
           </div>
@@ -196,9 +238,12 @@
       </div>
     </section>
 
-    <script src="./js/jquery-3.2.0.min.js" charset="utf-8"></script>
-    <script src="./js/jquery.sticky.js" charset="utf-8"></script>
-    <script src="./js/scripts.js" charset="utf-8"></script>
+    <script src="./js/jquery-3.2.0.min.js"
+      charset="utf-8"></script>
+    <script src="./js/jquery.sticky.js"
+      charset="utf-8"></script>
+    <script src="./js/scripts.js"
+      charset="utf-8"></script>
   </body>
 
 </html>

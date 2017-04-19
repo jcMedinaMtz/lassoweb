@@ -1,0 +1,485 @@
+.form-container {
+    position: relative;
+    width: 100%;
+    max-width: 40rem;
+    margin: 5rem auto;
+    padding: 3rem 5rem 0;
+    border-radius: 1px;
+    background: #fff;
+}
+.form-container::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    -webkit-transition: -webkit-transform .28s ease-in-out;
+    transition: -webkit-transform .28s ease-in-out;
+    transition: transform .28s ease-in-out;
+    transition: transform .28s ease-in-out, -webkit-transform .28s ease-in-out;
+    -webkit-transform: scale(.98);
+    transform: scale(.98);
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+}
+.form-container:hover::before {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.button-container {
+    text-align: center;
+}
+
+fieldset {
+    margin: 0 0 3rem;
+    padding: 0;
+    border: none;
+}
+
+.form-radio,
+.form-group {
+    position: relative;
+    margin-top: 2.25rem;
+    margin-bottom: 2.25rem;
+}
+
+.form-inline>.form-group,
+.form-inline>.btn {
+    display: inline-block;
+
+    margin-bottom: 0;
+}
+
+.form-help {
+    font-size: .8rem;
+    margin-top: .125rem;
+    margin-left: .125rem;
+    color: #b3b3b3;
+}
+.checkbox .form-help,
+.form-radio .form-help,
+.form-group .form-help {
+    position: absolute;
+    width: 100%;
+}
+.checkbox .form-help {
+    position: relative;
+    margin-bottom: 1rem;
+}
+.form-radio .form-help {
+    margin-top: -1rem;
+    padding-top: .25rem;
+}
+
+.form-group input {
+    height: 1.9rem;
+}
+.form-group textarea {
+    resize: none;
+}
+.form-group select {
+    font-size: 1rem;
+    line-height: 1.6;
+    width: 100%;
+    height: 1.6rem;
+    padding: .125rem .125rem .0625rem;
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+.form-group .control-label {
+    font-size: 1rem;
+    font-weight: normal;
+
+    position: absolute;
+    z-index: 1;
+    top: .25rem;
+
+    padding-left: .125rem;
+
+    -webkit-transition: all .28s ease;
+    transition: all .28s ease;
+    pointer-events: none;
+
+    color: #b3b3b3;
+}
+.form-group .bar {
+    position: relative;
+
+    display: block;
+
+    border-bottom: .0625rem solid #999;
+}
+.form-group .bar::before {
+    position: absolute;
+    z-index: 2;
+    bottom: -.0625rem;
+    left: 50%;
+
+    width: 0;
+    height: .125rem;
+
+    content: '';
+    -webkit-transition: left .28s ease, width .28s ease;
+    transition: left .28s ease, width .28s ease;
+
+    background: #337ab7;
+}
+.form-group input,
+.form-group textarea {
+    font-size: 1rem;
+    line-height: 1.9;
+
+    display: block;
+
+    width: 100%;
+    padding: .125rem .125rem .0625rem;
+
+    -webkit-transition: all .28s ease;
+    transition: all .28s ease;
+
+    color: transparent;
+    border-width: 0;
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+}
+.form-group input[type='file'] {
+    line-height: 1;
+}
+.form-group input[type='file']~.bar {
+    display: none;
+}
+.form-group select,
+.form-group input:focus,
+.form-group input:valid,
+.form-group input.form-file,
+.form-group input.has-value,
+.form-group textarea:focus,
+.form-group textarea:valid,
+.form-group textarea.form-file,
+.form-group textarea.has-value {
+    color: #333;
+}
+.form-group select~.control-label,
+.form-group input:focus~.control-label,
+.form-group input:valid~.control-label,
+.form-group input.form-file~.control-label,
+.form-group input.has-value~.control-label,
+.form-group textarea:focus~.control-label,
+.form-group textarea:valid~.control-label,
+.form-group textarea.form-file~.control-label,
+.form-group textarea.has-value~.control-label {
+    font-size: .8rem;
+
+    top: -1rem;
+    left: 0;
+
+    color: gray;
+}
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+}
+.form-group select:focus~.control-label,
+.form-group input:focus~.control-label,
+.form-group textarea:focus~.control-label {
+    color: #337ab7;
+}
+.form-group select:focus~.bar::before,
+.form-group input:focus~.bar::before,
+.form-group textarea:focus~.bar::before {
+    left: 0;
+
+    width: 100%;
+}
+
+.checkbox label,
+.form-radio label {
+    position: relative;
+
+    display: block;
+
+    padding-left: 2rem;
+
+    cursor: pointer;
+    text-align: left;
+
+    color: #333;
+}
+.checkbox input,
+.form-radio input {
+    position: absolute;
+    left: 0;
+
+    width: auto;
+
+    opacity: .00000001;
+}
+
+.radio {
+    margin-bottom: 1rem;
+}
+.radio .helper {
+    font-size: 1rem;
+
+    position: absolute;
+    top: -.25rem;
+    left: -.25rem;
+
+    display: block;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    color: #999;
+}
+.radio .helper::before,
+.radio .helper::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 1rem;
+    height: 1rem;
+    margin: .25rem;
+
+    content: '';
+    -webkit-transition: -webkit-transform .28s ease;
+    transition: -webkit-transform .28s ease;
+    transition: transform .28s ease;
+    transition: transform .28s ease, -webkit-transform .28s ease;
+
+    border: .125rem solid currentColor;
+    border-radius: 50%;
+}
+.radio .helper::after {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+
+    border-color: #337ab7;
+    background-color: #337ab7;
+}
+.radio label:hover .helper {
+    color: #337ab7;
+}
+.radio input:checked~.helper::after {
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+}
+.radio input:checked~.helper::before {
+    color: #337ab7;
+}
+
+.checkbox {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+.checkbox .helper {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+
+    width: 1rem;
+    height: 1rem;
+
+    -webkit-transition: border-color .28s ease;
+    transition: border-color .28s ease;
+
+    color: #999;
+    border: .125rem solid currentColor;
+    border-radius: .0625rem;
+}
+.checkbox .helper::before,
+.checkbox .helper::after {
+    position: absolute;
+
+    display: block;
+
+    width: .2rem;
+    height: 0;
+
+    content: '';
+    -webkit-transition: opacity .28s ease, height 0s linear .28s;
+    transition: opacity .28s ease, height 0s linear .28s;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+
+    opacity: 0;
+    border-radius: .25rem;
+    background-color: #337ab7;
+}
+.checkbox .helper::before {
+    top: .65rem;
+    left: .38rem;
+
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+
+    box-shadow: 0 0 0 .0625rem #fff;
+}
+.checkbox .helper::after {
+    top: .3rem;
+    left: 0;
+
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.checkbox label:hover .helper {
+    color: #337ab7;
+}
+.checkbox input:checked~.helper {
+    color: #337ab7;
+}
+.checkbox input:checked~.helper::after,
+.checkbox input:checked~.helper::before {
+    -webkit-transition: height .28s ease;
+    transition: height .28s ease;
+
+    opacity: 1;
+}
+.checkbox input:checked~.helper::after {
+    height: .5rem;
+}
+.checkbox input:checked~.helper::before {
+    height: 1.2rem;
+
+    -webkit-transition-delay: .28s;
+    transition-delay: .28s;
+}
+
+.radio+.radio,
+.checkbox+.checkbox {
+    margin-top: 1rem;
+}
+
+.has-error .legend.legend,
+.has-error.form-group .control-label.control-label {
+    color: #d9534f;
+}
+.has-error.form-group .form-help,
+.has-error.form-group .helper,
+.has-error.checkbox .form-help,
+.has-error.checkbox .helper,
+.has-error.radio .form-help,
+.has-error.radio .helper,
+.has-error.form-radio .form-help,
+.has-error.form-radio .helper {
+    color: #d9534f;
+}
+.has-error .bar::before {
+    left: 0;
+
+    width: 100%;
+
+    background: #d9534f;
+}
+
+.button {
+    font-size: 1.1rem;
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin: 3rem 0;
+    padding: .75rem 3rem;
+
+    cursor: pointer;
+    -webkit-transition: background-color .28s ease, color .28s ease, box-shadow .28s ease;
+    transition: background-color .28s ease, color .28s ease, box-shadow .28s ease;
+
+    color: #4f93ce;
+    border: 1px solid currentColor;
+    background: currentColor;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+.button span {
+    position: relative;
+    z-index: 1;
+
+    color: #fff;
+}
+.button::before {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+
+    width: 30vh;
+    height: 30vh;
+
+    content: '';
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+
+    opacity: 1;
+    border: 50vh solid #1d4567;
+    border-radius: 50%;
+    background: #071017;
+}
+.button:hover {
+    color: #337ab7;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+}
+.button:active::before,
+.button:focus::before {
+    -webkit-transition: opacity .28s ease .364s, -webkit-transform 1.12s ease;
+    transition: opacity .28s ease .364s, -webkit-transform 1.12s ease;
+    transition: transform 1.12s ease, opacity .28s ease .364s;
+    transition: transform 1.12s ease, opacity .28s ease .364s, -webkit-transform 1.12s ease;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+
+    opacity: 0;
+}
+.button:focus {
+    outline: none;
+}
+
+
+.card {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 2px;
+    background: #fff;
+}
+
+.card.lvl-1 {
+    -webkit-transition: all .3s cubic-bezier(.25, .8, .25, 1);
+    transition: all .3s cubic-bezier(.25, .8, .25, 1);
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+}
+
+.card.lvl-1:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+}
+
+.card.lvl-2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+}
+
+.card.lvl-3 {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+}
+
+.card.lvl-4 {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+}
+
+.card.lvl-5 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, .30), 0 15px 12px rgba(0, 0, 0, .22);
+}
